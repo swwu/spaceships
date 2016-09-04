@@ -1,7 +1,7 @@
-Valorous-Class
-SM+14 Prototype Battlecruiser
-1000m
-(Republic)
+Valorous-Class  
+SM+14 Prototype Battlecruiser  
+1000m  
+(Republic)  
 
 | dST/HP | Hnd/SR | HT | Move | LWt | Load | SM | Occ | dDR | Range | Cost |
 |--------|--------|----|------|-----|------|----|-----|-----|-------|------|
@@ -71,7 +71,7 @@ Weapons
 | # | Weapon | Dmg | sAcc | Rcl | RoF | Shots | Range |
 |---|--------|-----|------|-----|-----|-------|-------|
 | 2 | 300GJ Particle Beam Turret | 3dx50(5) burn rad sur | -2 | 1 | 1 | | L |
-| 3 | 80cm Fixed Missile Launcher | 6dx60(2) cr | +5 | 1 | 1 | 450(+3) | X |
+| 3 | 80cm Fixed Missile Launcher | 2dx200(2) cr | +5 | 1 | 1 | 450(+3) | X |
 | 5 | 30GJ UV Laser Turret | 6dx10(2) burn | +1 | 1 | 1 | | L/X |
 |15 | 1GJ Rapid-Fire Laser Turret | 4dx5(2) burn | +1(+4) | 1 | 20 | | S/L |
 

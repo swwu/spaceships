@@ -1,0 +1,15 @@
+[{
+  "id": "particle",
+  "name": "Particle Beam",
+  "type": "beam",
+  "size": {
+    "type": "geometric_10_half",
+    "start": [1,4]
+  },
+  "dmg_mult": 1,
+  "sacc": -3,
+  "dmg_kw": "burn rad sur",
+  "armor_div": 5,
+  "rof": 1,
+  "range": 1
+}]

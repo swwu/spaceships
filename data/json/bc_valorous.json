@@ -1,0 +1,45 @@
+{
+  "id": "bc_valorous",
+  "name": "Valorous",
+  "role": "Prototype Battlecruiser",
+  "sm": 14,
+  "systems":
+  {
+    "front":
+    {
+      "1": "armor_nanocomposite",
+      "2": "battery_medium",
+      "3": "d_ecm_area",
+      "4": "comms_multipurpose",
+      "5": "habitat",
+      "6": "pp_fusion"
+    },
+    "center":
+    {
+      "1": "armor_nanocomposite",
+      "2": "battery_major",
+      "3": "battery_major",
+      "4": "battery_sec_tert",
+      "5": "prototype_force_screen_heavy",
+      "6": "pp_fusion",
+      "core": "control_room"
+    },
+    "rear":
+    {
+      "1": "armor_nanocomposite",
+      "2": ["hangar_bay", "hangar_bay", "cargo_hold"],
+      "3": "factory_robo",
+      "4": "reactionless_standard",
+      "5": "reactionless_standard",
+      "6": "stardrive",
+      "core": "pp_antimatter"
+    }
+  },
+  "weapons":
+    [{
+      "size": 0,
+      "section": "center",
+      "count": 2,
+      "weapon": "particle"
+    }]
+}

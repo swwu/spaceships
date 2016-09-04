@@ -1,7 +1,7 @@
-S/I-12 "Peregrine"
-SM+6 Interceptor/Space Superiority Fighter
-20m
-(republic)
+S/I-12 "Peregrine"  
+SM+6 Interceptor/Space Superiority Fighter  
+20m  
+(republic)  
 
 | dST/HP | Hnd/SR | HT | Move | LWt | SM | Occ | dDR | Range | Cost |
 |--------|--------|----|------|-----|----|-----|-----|-------|------|
@@ -48,5 +48,5 @@ Weapons
 | # | Weapon | Dmg | sAcc | Rcl | RoF | Shots/SM | Range |
 |---|--------|-----|------|-----|-----|----------|-------|
 | 2 | 30MJ Fixed Laser | 6d(2) burn | +2(+0) | 1 | 2 | | S |
-| 1 | 24cm Fixed Missile Launcher | 6dx18(2) burn | +4 | 1 | 1 | 10(+0) | X |
+| 1 | 24cm Fixed Missile Launcher | 6dx4(2) burn | +4 | 1 | 1 | 10(+0) | X |
 

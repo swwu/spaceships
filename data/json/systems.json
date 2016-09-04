@@ -1,0 +1,136 @@
+[
+{
+  "id": "armor_nanocomposite",
+  "name": "Armor - Nanocomposite",
+  "type": "armor",
+  "dr": {
+    "type": "dr",
+    "start": [7, 5]
+  }
+},
+
+
+{
+  "id": "battery_major",
+  "name": "Weapons Battery - Major",
+  "type": "weapons_battery",
+  "mounts":
+  {
+    "0": 1
+  }
+},
+{
+  "id": "battery_medium",
+  "name": "Weapons Battery - Medium",
+  "type": "weapons_battery",
+  "mounts":
+  {
+    "-1": 3
+  }
+},
+{
+  "id": "battery_sec",
+  "name": "Weapons Battery - Secondary",
+  "type": "weapons_battery",
+  "mounts":
+  {
+    "-2": 10
+  }
+},
+{
+  "id": "battery_sec_tert",
+  "name": "Weapons Battery - Mixed Secondary/Tertiary",
+  "type": "weapons_battery",
+  "mounts":
+  {
+    "-2": 5,
+    "-3": 15
+  }
+},
+{
+  "id": "battery_tert",
+  "name": "Weapons Battery - Tertiary",
+  "type": "weapons_battery",
+  "mounts":
+  {
+    "-3": 30
+  }
+},
+
+
+{
+  "id": "pp_fusion",
+  "name": "Power Plant - Fusion Reactor",
+  "type": "power_plant",
+  "pp_gen": 2
+},
+{
+  "id": "pp_antimatter",
+  "name": "Power Plant - Antimatter Reactor",
+  "type": "power_plant",
+  "pp_gen": 4,
+  "volatile": true
+},
+
+
+{
+  "id": "reactionless_standard",
+  "name": "Reactionless Engine - Standard",
+  "type": "engine",
+  "pp_draw": 1,
+  "thrust": 1
+},
+{
+  "id": "stardrive",
+  "name": "Stardrive",
+  "type": "misc",
+  "pp_draw": 1
+},
+
+
+{
+  "id": "factory_robo",
+  "name": "Factory - Robofac",
+  "type": "fab",
+  "pp_draw": 1
+},
+
+
+{
+  "id": "d_ecm_area",
+  "name": "Defensive ECM - Area Jammer",
+  "type": "misc"
+},
+{
+  "id": "comms_multipurpose",
+  "name": "Comms/Sensor Array - Multipurpose",
+  "type": "misc"
+},
+{
+  "id": "habitat",
+  "name": "Habitat",
+  "type": "misc"
+},
+{
+  "id": "control_room",
+  "name": "Control Room",
+  "type": "misc"
+},
+{
+  "id": "hangar_bay",
+  "name": "Hangar Bay",
+  "type": "misc"
+},
+{
+  "id": "cargo_hold",
+  "name": "Cargo Hold",
+  "type": "misc"
+},
+{
+  "id": "prototype_force_screen_heavy",
+  "name": "Prototype Heavy Force Screen",
+  "type": "misc",
+  "pp_draw": 2
+},
+
+{}]

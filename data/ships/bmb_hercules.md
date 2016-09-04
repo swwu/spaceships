@@ -1,7 +1,7 @@
-A-4 "Hercules"
-SM+8 Torpedo Bomber
-70m
-(Republic)
+A-4 "Hercules"  
+SM+8 Torpedo Bomber  
+70m  
+(Republic)  
 
 | dST/HP | Hnd/SR | HT | Move | LWt | SM | Occ | dDR | Range | Cost |
 |--------|--------|----|------|-----|----|-----|-----|-------|------|
@@ -55,6 +55,6 @@ Weapons
 ==
 | # | Weapon | Dmg | sAcc | Rcl | RoF | Shots/SM | Range |
 |---|--------|-----|------|-----|-----|-------|-------|
-| 1 | 40cm Fixed Torpedo Launcher | 6dx30(2) burn | +5(+0) | 1 | 2 | 20/+1 | X |
+| 1 | 40cm Fixed Torpedo Launcher | 4dx20(2) burn | +5(+0) | 1 | 2 | 20/+1 | X |
 | 3 | 100MJ Laser Turret | 2dx5(2) burn | 0(+0) | 1 | 2 | | S/L |
 
