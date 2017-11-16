@@ -1,15 +1,67 @@
 [{
-  "id": "particle",
-  "name": "Particle Beam",
+  "id": "particle2",
+  "name": "Stabilized Particle Beam",
   "type": "beam",
-  "size": {
-    "type": "geometric_10_half",
-    "start": [1,4]
-  },
-  "dmg_mult": 1,
-  "sacc": -3,
+  "dmg_track": 1,
   "dmg_kw": "burn rad sur",
   "armor_div": 5,
   "rof": 1,
-  "range": 1
+  "beam": {
+    "sacc": -1,
+    "range_track": 2
+  }
+},
+{
+  "id": "particle",
+  "name": "Particle Beam",
+  "type": "beam",
+  "dmg_track": 1,
+  "dmg_kw": "burn rad sur",
+  "armor_div": 5,
+  "rof": 1,
+  "beam": {
+    "sacc": -3,
+    "range_track": 1
+  }
+},
+{
+  "id": "uvlaser",
+  "name": "UV Laser",
+  "type": "beam",
+  "dmg_track": 1,
+  "dmg_kw": "burn",
+  "armor_div": 2,
+  "rof": 1,
+  "beam": {
+    "sacc": 0,
+    "range_track": 3
+  }
+},
+{
+  "id": "plasma",
+  "name": "Plasma Beam",
+  "type": "beam",
+  "dmg_track": 2,
+  "dmg_kw": "burn exp",
+  "armor_div": 2,
+  "rof": 1,
+  "beam": {
+    "sacc": -3,
+    "range_track": 0
+  }
+},
+
+{
+  "id": "conventional_missile",
+  "name": "Conventional Missile",
+  "type": "launcher",
+  "dmg_track": 2,
+  "dmg_kw": "burn exp",
+  "armor_div": 2,
+  "rof": 1,
+  "missile": {
+    "big_name": "Conventional Torpedo",
+    "speed": 15,
+    "turns": 2
+  }
 }]

@@ -2,7 +2,7 @@
   "id": "bc_valorous",
   "name": "Valorous",
   "role": "Prototype Battlecruiser",
-  "sm": 14,
+  "sm": 13,
   "systems":
   {
     "front":
@@ -10,7 +10,7 @@
       "1": "armor_nanocomposite",
       "2": "battery_medium",
       "3": "d_ecm_area",
-      "4": "comms_multipurpose",
+      "4": "sensor_multipurpose",
       "5": "habitat",
       "6": "pp_fusion"
     },
@@ -20,7 +20,7 @@
       "2": "battery_major",
       "3": "battery_major",
       "4": "battery_sec_tert",
-      "5": "prototype_force_screen_heavy",
+      "5": "prototype_force_screen",
       "6": "pp_fusion",
       "core": "control_room"
     },
@@ -37,9 +37,32 @@
   },
   "weapons":
     [{
-      "size": 0,
+      "rel_size": 0,
       "section": "center",
       "count": 2,
-      "weapon": "particle"
-    }]
+      "weapon": "particle2",
+      "is_turret": true
+    },
+    {
+      "rel_size": -2,
+      "section": "center",
+      "count": 5,
+      "weapon": "uvlaser",
+      "is_turret": true
+    },
+    {
+      "rel_size": -3,
+      "section": "center",
+      "count": 15,
+      "weapon": "uvlaser",
+      "is_turret": true
+    },
+    {
+      "rel_size": -1,
+      "section": "front",
+      "count": 3,
+      "weapon": "conventional_missile",
+      "is_turret": false
+    }
+    ]
 }

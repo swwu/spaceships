@@ -37,3 +37,5 @@ ship = load_ship("data/json/bc_valorous.json", all_systems, all_weapons)
 
 print(ship.to_markdown(all_systems, all_weapons))
 
+#print(all_systems["hangar_bay"].to_markdown())
+
