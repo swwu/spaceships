@@ -166,7 +166,7 @@
 
 {
   "id": "reactionless_rotary",
-  "name": "Reactionless Engine - Standard",
+  "name": "Reactionless Engine - Rotary",
   "type": "engine",
   "pp_draw": 1,
   "engine": {
@@ -202,7 +202,7 @@
 },
 {
   "id": "reactionless_hot",
-  "name": "Reactionless Engine - Standard",
+  "name": "Reactionless Engine - Hot",
   "type": "engine",
   "pp_draw": 1,
   "engine": {

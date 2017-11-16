@@ -15,17 +15,21 @@ def generate_mults(mult_cycle):
         tens += 1
 
 class BaseWeapon:
+    id = ""
     name = None
     dmg_track = 1
     dmg_kw = None
     armor_div = None
     rof = None
+    draws_power = False
 
     def __init__(self, w_json):
+        self.id = w_json["id"]
         self.name = w_json["name"]
         self.dmg_kw = w_json["dmg_kw"]
         self.armor_div = w_json["armor_div"]
         self.rof = w_json["rof"]
+        self.draws_power = w_json["draws_power"]
 
     def get_weap_data(self, sm, is_turret):
         return {"type": "BASE TYPE PLEASE OVERRIDE",

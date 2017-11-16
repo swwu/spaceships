@@ -6,6 +6,7 @@
   "dmg_kw": "burn rad sur",
   "armor_div": 5,
   "rof": 1,
+  "draws_power": true,
   "beam": {
     "sacc": -1,
     "range_track": 2
@@ -19,6 +20,7 @@
   "dmg_kw": "burn rad sur",
   "armor_div": 5,
   "rof": 1,
+  "draws_power": true,
   "beam": {
     "sacc": -3,
     "range_track": 1
@@ -32,6 +34,7 @@
   "dmg_kw": "burn",
   "armor_div": 2,
   "rof": 1,
+  "draws_power": true,
   "beam": {
     "sacc": 0,
     "range_track": 3
@@ -45,6 +48,7 @@
   "dmg_kw": "burn exp",
   "armor_div": 2,
   "rof": 1,
+  "draws_power": true,
   "beam": {
     "sacc": -3,
     "range_track": 0
@@ -59,6 +63,7 @@
   "dmg_kw": "burn exp",
   "armor_div": 2,
   "rof": 1,
+  "draws_power": false,
   "missile": {
     "big_name": "Conventional Torpedo",
     "speed": 15,

@@ -4,18 +4,22 @@ import math
 import scales
 
 class BaseSystem:
+    id = ""
     name = None
     s_id = None
     pp_draw = 0
     cost_scale = None
     workspace_scale = 0
+    volatile = False
 
     def __init__(self, comp_json):
+        self.id = comp_json["id"]
         self.name = comp_json["name"]
         self.s_id = comp_json["id"]
         self.pp_draw = comp_json.get("pp_draw",0)
         self.cost_scale = scales.scale_from_json(comp_json["cost"])
         self.workspace_scale = scales.scale_from_json(comp_json["workspaces"])
+        self.volatile = comp_json.get("volatile", False)
 
     def get_values_delta(self,sm):
         return {"pp_draw": self.pp_draw,
