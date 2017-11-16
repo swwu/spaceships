@@ -27,6 +27,20 @@
   }
 },
 {
+  "id": "laser",
+  "name": "Laser",
+  "type": "beam",
+  "dmg_track": 1,
+  "dmg_kw": "burn",
+  "armor_div": 1,
+  "rof": 1,
+  "draws_power": true,
+  "beam": {
+    "sacc": 0,
+    "range_track": 2
+  }
+},
+{
   "id": "uvlaser",
   "name": "UV Laser",
   "type": "beam",

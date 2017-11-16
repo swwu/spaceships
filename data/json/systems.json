@@ -1,5 +1,21 @@
 [
 {
+  "id": "armor_adv_metallic_laminate",
+  "name": "Armor - Advanced Metallic Laminate",
+  "type": "armor",
+  "armor": {
+    "dr": {
+      "cycle": "dr",
+      "start": [5, 5]
+    }
+  },
+  "workspaces": 0,
+  "cost": {
+    "cycle": [2, 6],
+    "start": [60000, 5]
+  }
+},
+{
   "id": "armor_nanocomposite",
   "name": "Armor - Nanocomposite",
   "type": "armor",
@@ -15,7 +31,6 @@
     "start": [150000, 5]
   }
 },
-
 
 {
   "id": "battery_major",
@@ -253,6 +268,20 @@
 },
 
 
+{
+  "id": "d_ecm",
+  "name": "Defensive ECM",
+  "type": "misc",
+  "workspaces": {
+    "cycle": [1, 3],
+    "start": [1, 10],
+    "min_sm": 10
+  },
+  "cost": {
+    "cycle": [1, 3],
+    "start": [300000, 5]
+  }
+},
 {
   "id": "d_ecm_area",
   "name": "Defensive ECM - Area Jammer",

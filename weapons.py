@@ -83,6 +83,9 @@ class BeamWeapon(BaseWeapon):
             size_str = "Fixed " + size_str
             sacc += 2
 
+        if sm >= 9:
+            sacc += 1
+
         return dict(super().get_weap_data(sm,is_turret),
                 **{
                     "type": "beam",
@@ -166,7 +169,7 @@ class LauncherWeapon(BaseWeapon):
             name = self.big_name
 
         size_str = "%scm %s" % (
-                self.LAUNCHER_CALIBER_TRACK[sm+9], self.name)
+                self.LAUNCHER_CALIBER_TRACK[sm+9], name)
         if is_turret:
             size_str = size_str + " Turreted Launcher"
         else:
@@ -175,8 +178,10 @@ class LauncherWeapon(BaseWeapon):
 
         return dict(super().get_weap_data(sm,is_turret),
                 **{
-                    "type": "missile",
+                    "type": "launcher",
                     "dmg_label": "6dx%s" % self.WARHEAD_MULTIPLIER_TRACK[sm+9],
+                    "speed": self.speed,
+                    "turns": turns,
                     "range": self.speed * turns,
                     "sacc": sacc,
                     "size_label": size_str

@@ -16,16 +16,16 @@ front
 ---
 | # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
 |---|----|--------|------|--------|-------|-----|-----|
-|3|12 (-1)|64cm Conventional Missile Tube|5|6dx200 (2)|60|1||
+|3|12 (-1)|64cm Conventional Torpedo Tube|5|6dx200 (2)|60 (15 move for 4 turns)|1||
 
 
 center
 ---
 | # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
 |---|----|--------|------|--------|-------|-----|-----|
-|2|13 (0)|100GJ Stabilized Particle Beam Turret|-1|2dx50 burn rad sur (5)|3/10|1||
-|5|11 (-2)|10GJ UV Laser Turret|0|4dx10 burn (2)|3/10|1||
-|15|10 (-3)|3GJ UV Laser Turret|0|6dx5 burn (2)|3/10|1||
+|2|13 (0)|100GJ Stabilized Particle Beam Turret|0|2dx50 burn rad sur (5)|3/10|1||
+|5|11 (-2)|10GJ UV Laser Turret|1|4dx10 burn (2)|3/10|1||
+|15|10 (-3)|3GJ UV Laser Turret|1|6dx5 burn (2)|3/10|1||
 
 
 rear
@@ -42,7 +42,7 @@ front
 ---
 * [1] Armor - Nanocomposite
 * [2] Weapons Battery - Medium
-	 - Mounted: 3x64cm Conventional Missile Tube
+	 - Mounted: 3x64cm Conventional Torpedo Tube
 	 - 30 workspaces
 * [3] Defensive ECM - Area Jammer
 	 - 30 workspaces

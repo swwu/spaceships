@@ -280,6 +280,11 @@ class Ship:
                     range_str = None
                     if weap_data["type"] == "beam":
                         range_str = sformat.neq_slashed(weap_data["half_damage_range"], weap_data["range"])
+                    elif weap_data["type"] == "launcher":
+                        range_str = "%.0f (%.0f move for %.0f turns)" % (
+                                weap_data["range"],
+                                weap_data["speed"],
+                                weap_data["turns"])
                     else:
                         range_str = "%.0f" % weap_data["range"]
 
@@ -288,8 +293,8 @@ class Ship:
                         size_str, # size
                         weap_data["size_label"], # label
                         weap_data.get("sacc", "N/A"), # sAcc
-                        weap_data["dmg_label"] + (" (%s)" % weap.armor_div)
-                        if weap.armor_div != 1 else "", # dmg
+                        weap_data["dmg_label"] + (" (%s)" % # dmg
+                            (weap.armor_div if weap.armor_div != 1 else "")),
                         range_str, # range
                         weap.rof, # rof
                         "" # rcl
