@@ -1,52 +1,58 @@
-S/I-12 "Peregrine"  
-SM+6 Interceptor/Space Superiority Fighter  
-20m  
-(republic)  
+S/I-12 "Peregrine"-class  
+SM5 Space Superiority Fighter/Interceptor  
+15.0m
 
-| dST/HP | Hnd/SR | HT | Move | LWt | SM | Occ | dDR | Range | Cost |
-|--------|--------|----|------|-----|----|-----|-----|-------|------|
-| 30     | +0/4   | 12 | 13G   | 100 | +6 | 1   | 30/20/20 | - | $10M|
 
-Systems
-==
-Front
---
-* [1-3] Armor - Nanocomposite
-  - dDR 30
-* [4-6!!] Weapon Battery - Major
-  - 3 major mounts (2 fixed 30MJ lasers,  1 fixed 24cm missile launcher)
+| dST/HP | Hnd/SR | HT | Move | LWt | Load | SM | Occ | dDR | Range | Cost |
+|--------|--------|----|------|-----|------|----|-----|-----|-------|------|
+|20|0/4|12|13G|30|  |5|  |21/14/14|  |$2.44M|
 
-Center
---
-* [1-2] Armor - Nanocomposite
-  - dDR 20
-* [3-6] Fuel Tank
-  - 20 tons
-* [core] Control Room
-  - C7 computer
-  - array level 5
-  - 1 station
-
-Rear
---
-* [1-2] Armor - Nanocomposite
-  - dDR 20
-* [3-5] Reaction Engine - High-thrust Antimatter Plasma Torch
-  - 12G thrust / 90 minutes
-* [6!] Reactionless Engine - Hot
-  - 1G thrust
-* [core] Power Plant - Fusion Reactor
-  - 2pp / 200yr fuel
-
-Crew
-==
-* 1 minimum
-  - 1 pilot
 
 Weapons
-==
-| # | Weapon | Dmg | sAcc | Rcl | RoF | Shots/SM | Range |
-|---|--------|-----|------|-----|-----|----------|-------|
-| 2 | 30MJ Fixed Laser | 6d(2) burn | +2(+0) | 1 | 2 | | S |
-| 1 | 24cm Fixed Missile Launcher | 6dx4(2) burn | +4 | 1 | 1 | 10(+0) | X |
+===
 
+
+front
+---
+| # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
+|---|----|--------|------|--------|-------|-----|-----|
+|2|5 (0)|Fixed 10MJ UV Laser|2|4dx1 burn (2)|1/2|1||
+|1|5 (0)|20cm Conventional Missile Tube|4|6dx60 (2)|30 (15 move for 2 turns)|1||
+
+
+center
+---
+| # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
+|---|----|--------|------|--------|-------|-----|-----|
+
+
+rear
+---
+| # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
+|---|----|--------|------|--------|-------|-----|-----|
+
+
+Systems
+===
+
+
+front
+---
+* [1-3] Armor - Nanocomposite
+* [4-6!!] Weapons Battery - Major
+	 - Mounted: 1xFixed 10MJ UV Laser, 1xFixed 10MJ UV Laser, 1x20cm Conventional Missile Tube
+
+
+center
+---
+* [1-2] Armor - Nanocomposite
+* [3-6] Fuel Tank
+* [core] Control Room
+
+
+rear
+---
+* [1-2] Armor - Nanocomposite
+* [3-5] Reaction Engine - High-thrust Antimatter Plasma Torch
+* [6!] Reactionless Engine - Hot
+* [core++] Power Plant - Fusion Reactor

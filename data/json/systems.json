@@ -235,6 +235,24 @@
 },
 
 {
+  "id": "reaction_ht_antimatter_plasma_torch",
+  "name": "Reaction Engine - High-thrust Antimatter Plasma Torch",
+  "type": "engine",
+  "engine": {
+    "thrust": 4
+  },
+  "workspaces": {
+    "cycle": [1, 3],
+    "start": [1, 10],
+    "min_sm": 10
+  },
+  "cost": {
+    "cycle": [1, 3],
+    "start": [100000, 5]
+  }
+},
+
+{
   "id": "stardrive",
   "name": "Stardrive",
   "type": "misc",
@@ -400,6 +418,16 @@
   "type": "misc",
   "workspaces": 0,
   "cost": 0
+},
+{
+  "id": "fuel_tank",
+  "name": "Fuel Tank",
+  "type": "misc",
+  "workspaces": 0,
+  "cost": {
+    "cycle": [1, 3],
+    "start": [10000, 5]
+  }
 },
 {
   "_": "As a TL11 light force screen, but costs at +1SM and draws 2 power",

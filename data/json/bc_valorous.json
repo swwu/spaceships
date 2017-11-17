@@ -65,7 +65,7 @@
       "section": "center",
       "location": "4",
       "count": 15,
-      "weapon": "uvlaser",
+      "weapon": "uvlaser_rapid",
       "is_turret": true
     },
     {

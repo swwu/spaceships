@@ -25,7 +25,7 @@ center
 |---|----|--------|------|--------|-------|-----|-----|
 |2|13 (0)|100GJ Stabilized Particle Beam Turret|0|2dx50 burn rad sur (5)|3/10|1||
 |5|11 (-2)|10GJ UV Laser Turret|1|4dx10 burn (2)|3/10|1||
-|15|10 (-3)|3GJ UV Laser Turret|1|6dx5 burn (2)|3/10|1||
+|15|10 (-3)|300MJ Rapid-fire UV Laser Turret|0|3dx5 burn (2)|2/5|10||
 
 
 rear
@@ -61,7 +61,7 @@ center
 	 - Mounted: 1x100GJ Stabilized Particle Beam Turret, 1x100GJ Stabilized Particle Beam Turret
 	 - 60 workspaces
 * [4!] Weapons Battery - Mixed Secondary/Tertiary
-	 - Mounted: 5x10GJ UV Laser Turret, 15x3GJ UV Laser Turret
+	 - Mounted: 5x10GJ UV Laser Turret, 15x300MJ Rapid-fire UV Laser Turret
 	 - 30 workspaces
 * [5!!] Prototype Force Screen
 	 - 30 workspaces

@@ -17,7 +17,6 @@ def generate_mults(mult_cycle):
 class BaseWeapon:
     id = ""
     name = None
-    dmg_track = 1
     dmg_kw = None
     armor_div = None
     rof = None
@@ -58,6 +57,8 @@ class BeamWeapon(BaseWeapon):
             [0,0,0,1,1,1,2,2,2,5,5,5,10,10,10,20,20,20,50,50,50,100,100,100,100],
             [1,1,1,2,2,2,5,5,5,10,10,10,20,20,20,50,50,50,100,100,100,200,200,200,500]
             ]
+    dmg_track = 1
+    dmg_track_offset = 0
     sacc = 0
     size_name_scale = scales.get_scale("geometric_10_half",1,-9)
     range_track = 0
@@ -66,11 +67,14 @@ class BeamWeapon(BaseWeapon):
         super().__init__(w_json)
         beam_json = w_json["beam"]
         self.sacc = beam_json["sacc"]
+        self.dmg_track= beam_json["dmg_track"]
         self.range_track = beam_json["range_track"]
         self.dmg_dice_scale = scales.get_scale(
                 "dmg_dice", 1, 1)
+        self.dmg_track_offset = beam_json.get("dmg_track_offset",0)
 
     def get_weap_data(self,sm,is_turret):
+        sm += self.dmg_track_offset
         dmg_dice = self.dmg_dice_scale.get_scale_value(sm)
         sacc = self.sacc
 

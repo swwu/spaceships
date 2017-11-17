@@ -1,0 +1,63 @@
+{
+  "id": "int_valorous",
+  "name": "S/I-12 \"Peregrine\"",
+  "role": "Space Superiority Fighter/Interceptor",
+  "sm": 5,
+  "systems":
+  {
+    "front":
+    {
+      "1": "armor_nanocomposite",
+      "2": "armor_nanocomposite",
+      "3": "armor_nanocomposite",
+      "4": "battery_major",
+      "5": "battery_major",
+      "6": "battery_major"
+    },
+    "center":
+    {
+      "1": "armor_nanocomposite",
+      "2": "armor_nanocomposite",
+      "3": "fuel_tank",
+      "4": "fuel_tank",
+      "5": "fuel_tank",
+      "6": "fuel_tank",
+      "core": "control_room"
+    },
+    "rear":
+    {
+      "1": "armor_nanocomposite",
+      "2": "armor_nanocomposite",
+      "3": "reaction_ht_antimatter_plasma_torch",
+      "4": "reaction_ht_antimatter_plasma_torch",
+      "5": "reaction_ht_antimatter_plasma_torch",
+      "6": "reactionless_hot",
+      "core": "pp_fusion"
+    }
+  },
+  "weapons":
+    [{
+      "rel_size": 0,
+      "section": "front",
+      "location": "4",
+      "count": 1,
+      "weapon": "uvlaser",
+      "is_turret": false
+    },
+    {
+      "rel_size": 0,
+      "section": "front",
+      "location": "5",
+      "count": 1,
+      "weapon": "uvlaser",
+      "is_turret": false
+    },
+    {
+      "rel_size": 0,
+      "section": "front",
+      "location": "6",
+      "count": 1,
+      "weapon": "conventional_missile",
+      "is_turret": false
+    }]
+}
