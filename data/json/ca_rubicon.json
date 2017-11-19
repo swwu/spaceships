@@ -7,17 +7,17 @@
   {
     "front":
     {
-      "1": "armor_nanocomposite",
-      "2": "armor_nanocomposite",
-      "3": "armor_nanocomposite",
+      "1": "armor_nanocomposite_hardened",
+      "2": "armor_nanocomposite_hardened",
+      "3": "armor_nanocomposite_hardened",
       "4": "battery_major",
       "5": "d_ecm",
       "6": "sensor_tactical"
     },
     "center":
     {
-      "1": "armor_nanocomposite",
-      "2": "armor_nanocomposite",
+      "1": "armor_nanocomposite_hardened",
+      "2": "armor_nanocomposite_hardened",
       "3": "battery_major",
       "4": "battery_tert",
       "5": "habitat",
@@ -26,8 +26,8 @@
     },
     "rear":
     {
-      "1": "armor_nanocomposite",
-      "2": "armor_nanocomposite",
+      "1": "armor_nanocomposite_hardened",
+      "2": "armor_nanocomposite_hardened",
       "3": "cargo_hold",
       "4": "reactionless_standard",
       "5": "reactionless_standard",

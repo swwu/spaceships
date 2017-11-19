@@ -1,4 +1,5 @@
 import json
+import sys
 
 import ships
 import systems
@@ -33,9 +34,11 @@ def load_weapons(filename):
 
 all_systems = load_systems("data/json/systems.json")
 all_weapons = load_weapons("data/json/weapons.json")
+ship = load_ship(sys.argv[1], all_systems, all_weapons)
+#ship = load_ship("data/json/bmb_hercules.json", all_systems, all_weapons)
 #ship = load_ship("data/json/int_peregrine.json", all_systems, all_weapons)
 #ship = load_ship("data/json/ca_rubicon.json", all_systems, all_weapons)
-ship = load_ship("data/json/bc_valorous.json", all_systems, all_weapons)
+#ship = load_ship("data/json/bc_valorous.json", all_systems, all_weapons)
 
 print(ship.to_markdown(all_systems, all_weapons))
 

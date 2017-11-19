@@ -178,6 +178,7 @@ class Ship:
         self.values["sr"] = 4 if self.sm <= 6 else 5
         self.values["lwt"] = scales.Geometric10HalfScale(10,4).get_scale_value(self.sm)
         self.values["length"] = scales.DRScale(15,5).get_scale_value(self.sm)
+        self.values["mass"] = scales.CycleScale(30,5,[1,3]).get_scale_value(self.sm)
 
     def calc_systems_values(self, all_systems):
         for ((section_key, system_key, system_sm),
@@ -227,23 +228,33 @@ class Ship:
 
         lines.append("%s-class  " % self.name)
         lines.append("SM%s %s  " % (self.sm, self.role))
-        lines.append("%sm" % self.values["length"])
+        lines.append("%sm / %sT" % (
+            self.values["length"],
+            sformat.si_number(self.values["mass"])))
 
         lines.append("\n")
+
+        st_hp_str = sformat.neq_slashed(self.values["st"],self.values["hp"])
+        if self.values.get("shield_hp",0) > 0:
+            st_hp_str += " + %.0f" % self.values["shield_hp"]
+
+        dr_str = sformat.neq_slashed(self.values["front_dr"],
+                self.values["center_dr"], self.values["rear_dr"])
+        if self.values.get("shield_dr",0) > 0:
+            dr_str += " + %.0f" % self.values["shield_dr"]
 
         lines.append("| dST/HP | Hnd/SR | HT | Move | LWt | Load | SM | Occ | dDR | Range | Cost |")
         lines.append("|--------|--------|----|------|-----|------|----|-----|-----|-------|------|")
         lines.append("|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|" % (
-            sformat.neq_slashed(self.values["st"],self.values["hp"]),
-            "%s/%s" % (self.values["hnd"],self.values["sr"]),
-            self.values["ht"],
-            "%sG" % self.values["thrust"],
-            sformat.si_number(self.values["lwt"]),
+            st_hp_str, # hp/str
+            "%s/%s" % (self.values["hnd"],self.values["sr"]), # hnd/sr
+            self.values["ht"], # ht
+            "%sG" % self.values["thrust"], #thrust
+            sformat.si_number(self.values["lwt"]), # load weight
             "  ",# load , sformat.si_number(self.values["load"]),
-            self.sm,
+            self.sm, #sm
             "  ",# occ
-            sformat.neq_slashed(self.values["front_dr"], self.values["center_dr"],
-                self.values["rear_dr"]),
+            dr_str, # dr
             "  ", #range
             sformat.money_number(self.values["cost"]) #cost
             ))
@@ -330,13 +341,8 @@ class Ship:
                 pp_gen = num_systems * system.get_values_delta(system_sm
                         ).get("pp_gen",0)
 
-                system_detail_lines = []
-
-                if system.volatile:
-                    system_detail_lines.append(
-                            "Volatile - roll vs HT if disabled, HT-5 if \
-                            destroyed. Failure means the ship is explodes \
-                            (reduced to -10xHP) at end of its next turn.")
+                system_detail_lines = system.details_to_markdown_lines(
+                        system_sm, num_systems)
 
                 if isinstance(system, systems.WeaponsBatterySystem):
                     # size -> weapon_id -> is_turret -> count
@@ -365,11 +371,6 @@ class Ship:
                         pp_draw += pp_draw_add
                     system_detail_lines.append("Mounted: %s" % ", ".join(weapon_strs))
 
-                workspaces = system.get_values_delta(system_sm
-                        ).get("workspaces",0) * num_systems
-                if workspaces > 0:
-                    system_detail_lines.append("%.0f workspaces" %
-                            workspaces)
 
                 system_detail_lines = ("\t - %s" % s for s in
                         system_detail_lines)

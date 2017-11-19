@@ -1,0 +1,55 @@
+{
+  "id": "bmb_hercules",
+  "name": "A-4 \"Hercules\"",
+  "role": "Torpedo Bomber",
+  "sm": 7,
+  "systems":
+  {
+    "front":
+    {
+      "1": "armor_nanocomposite",
+      "2": "armor_nanocomposite",
+      "3": "armor_nanocomposite",
+      "4": "d_ecm",
+      "5": "fuel_tank",
+      "6": "battery_spinal"
+    },
+    "center":
+    {
+      "1": "armor_nanocomposite",
+      "2": "armor_nanocomposite",
+      "3": "armor_nanocomposite",
+      "4": "battery_medium",
+      "5": "fuel_tank",
+      "6": "battery_spinal_extra",
+      "core": "control_room"
+    },
+    "rear":
+    {
+      "1": "armor_nanocomposite",
+      "2": "armor_nanocomposite",
+      "3": "armor_nanocomposite",
+      "4": "reaction_ht_antimatter_plasma_torch",
+      "5": "reactionless_hot",
+      "6": "battery_spinal_extra",
+      "core": "pp_fusion"
+    }
+  },
+  "weapons":
+    [{
+      "rel_size": 1,
+      "section": "front",
+      "location": "6",
+      "count": 1,
+      "weapon": "conventional_missile",
+      "is_turret": false
+    },
+    {
+      "rel_size": -1,
+      "section": "center",
+      "location": "4",
+      "count": 3,
+      "weapon": "uvlaser",
+      "is_turret": true
+    }]
+}

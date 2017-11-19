@@ -1,6 +1,6 @@
 S/I-12 "Peregrine"-class  
 SM5 Space Superiority Fighter/Interceptor  
-15.0m
+15.0m / 30T
 
 
 | dST/HP | Hnd/SR | HT | Move | LWt | Load | SM | Occ | dDR | Range | Cost |
@@ -17,7 +17,7 @@ front
 | # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
 |---|----|--------|------|--------|-------|-----|-----|
 |2|5 (0)|Fixed 10MJ UV Laser|2|4dx1 burn (2)|1/2|1||
-|1|5 (0)|20cm Conventional Missile Tube|4|6dx60 (2)|30 (15 move for 2 turns)|1||
+|1|5 (0)|20cm Conventional Missile Tube|4|3dx30 (2)|30 (15 move for 2 turns)|1||
 
 
 center
@@ -47,6 +47,7 @@ center
 ---
 * [1-2] Armor - Nanocomposite
 * [3-6] Fuel Tank
+	 - Fuel Capacity: 6T
 * [core] Control Room
 
 

@@ -1,60 +1,66 @@
-A-4 "Hercules"  
-SM+8 Torpedo Bomber  
-70m  
-(Republic)  
+A-4 "Hercules"-class  
+SM7 Torpedo Bomber  
+30m / 300T
 
-| dST/HP | Hnd/SR | HT | Move | LWt | SM | Occ | dDR | Range | Cost |
-|--------|--------|----|------|-----|----|-----|-----|-------|------|
-| 70     | -1/5   | 12 | 7G   |1000 | +8 | 8   | 60  | -     | $102M|
 
-Systems
-==
-Front
---
-* [1-3] Armor - Nanocomposite
-  - dDR 60
-* [4-6] Weapon Battery - Oversized
-  - 1 oversized mounts (1 40cm fixed torpedo launcher)
+| dST/HP | Hnd/SR | HT | Move | LWt | Load | SM | Occ | dDR | Range | Cost |
+|--------|--------|----|------|-----|------|----|-----|-----|-------|------|
+|50|-1/5|12|5G|300|  |7|  |45|  |$29.7M|
 
-Center
---
-* [1-3] Armor - Nanocomposite
-  - dDR 60
-* [4!] Weapon Battery - Medium
-  - 3 medium mounts (3 100MJ laser turrets)
-* [5] Defensive ECM
-  - -2 to Hit
-* [6] Fuel Tank
-  - 50 tons
-* [core] Control Room
-  - C8 computer
-  - array level 7
-  - 4 stations
-
-Rear
---
-* [1-3] Armor - Nanocomposite
-  - dDR 60
-* [4] Fuel Tank
-  - 50 tons
-* [5] Reaction Engine - High-thrust Antimatter Plasma Torch
-  - 4G thrust / 180 minutes
-* [6!] Reactionless Engine - Hot
-  - 1G thrust
-* [core] Power Plant - Fusion Reactor
-  - 2pp / 200yr fuel
-
-Crew
-==
-* 8 minimum
-  - 1 pilot
-  - 3 control
-  - 4 gunners
 
 Weapons
-==
-| # | Weapon | Dmg | sAcc | Rcl | RoF | Shots/SM | Range |
-|---|--------|-----|------|-----|-----|-------|-------|
-| 1 | 40cm Fixed Torpedo Launcher | 4dx20(2) burn | +5(+0) | 1 | 2 | 20/+1 | X |
-| 3 | 100MJ Laser Turret | 2dx5(2) burn | 0(+0) | 1 | 2 | | S/L |
+===
 
+
+front
+---
+| # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
+|---|----|--------|------|--------|-------|-----|-----|
+|1|8 (1)|32cm Conventional Torpedo Tube|5|3dx50 (2)|60 (15 move for 4 turns)|1||
+
+
+center
+---
+| # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
+|---|----|--------|------|--------|-------|-----|-----|
+|3|6 (-1)|30MJ UV Laser Turret|0|6dx1 burn (2)|1/2|1||
+
+
+rear
+---
+| # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
+|---|----|--------|------|--------|-------|-----|-----|
+
+
+Systems
+===
+
+
+front
+---
+* [1-3] Armor - Nanocomposite
+* [4] Defensive ECM
+* [5] Fuel Tank
+	 - Fuel Capacity: 15T
+* [6] Weapons Battery - Spinal
+	 - Mounted: 1x32cm Conventional Torpedo Tube
+
+
+center
+---
+* [1-3] Armor - Nanocomposite
+* [4!] Weapons Battery - Medium
+	 - Mounted: 3x30MJ UV Laser Turret
+* [5] Fuel Tank
+	 - Fuel Capacity: 15T
+* [6] Weapons Battery - Spinal (Extra)
+* [core] Control Room
+
+
+rear
+---
+* [1-3] Armor - Nanocomposite
+* [4] Reaction Engine - High-thrust Antimatter Plasma Torch
+* [5!] Reactionless Engine - Hot
+* [6] Weapons Battery - Spinal (Extra)
+* [core++] Power Plant - Fusion Reactor

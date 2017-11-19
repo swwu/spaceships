@@ -135,6 +135,9 @@ class BeamWeapon(BaseWeapon):
 
 
 class LauncherWeapon(BaseWeapon):
+    # we use modified damage from actual rules, so missiles aren't 1-hit KOs
+    # against ships 2 sizes larger
+    MULTIPLIER_OFFSET = -4
     # starts at SM-9
     # TODO: share with guns when those are implemented
     LAUNCHER_CALIBER_TRACK = [
@@ -183,7 +186,8 @@ class LauncherWeapon(BaseWeapon):
         return dict(super().get_weap_data(sm,is_turret),
                 **{
                     "type": "launcher",
-                    "dmg_label": "6dx%s" % self.WARHEAD_MULTIPLIER_TRACK[sm+9],
+                    "dmg_label": "3dx%s" %
+                    self.WARHEAD_MULTIPLIER_TRACK[sm+9+self.MULTIPLIER_OFFSET],
                     "speed": self.speed,
                     "turns": turns,
                     "range": self.speed * turns,

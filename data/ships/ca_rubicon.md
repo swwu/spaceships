@@ -1,11 +1,11 @@
 Rubicon-class  
 SM12 Strike Cruiser  
-200m
+200m / 100kT
 
 
 | dST/HP | Hnd/SR | HT | Move | LWt | Load | SM | Occ | dDR | Range | Cost |
 |--------|--------|----|------|-----|------|----|-----|-----|-------|------|
-|300|-4/5|13|1.0G|100k|  |12|  |300/200/200|  |$11.2B|
+|300|-4/5|13|1.0G|100k|  |12|  |300/200/200|  |$14.7B|
 
 
 Weapons
@@ -39,10 +39,10 @@ Systems
 
 front
 ---
-* [1-3] Armor - Nanocomposite
+* [1-3] Armor - Nanocomposite (Hardened)
 * [4!] Weapons Battery - Major
-	 - Mounted: 1x30GJ UV Laser Turret
 	 - 10 workspaces
+	 - Mounted: 1x30GJ UV Laser Turret
 * [5] Defensive ECM
 	 - 10 workspaces
 * [6] Comms/Sensor Array - Tactical
@@ -51,13 +51,13 @@ front
 
 center
 ---
-* [1-2] Armor - Nanocomposite
+* [1-2] Armor - Nanocomposite (Hardened)
 * [3!] Weapons Battery - Major
+	 - 10 workspaces
 	 - Mounted: 1x30GJ UV Laser Turret
-	 - 10 workspaces
 * [4!] Weapons Battery - Tertiary
-	 - Mounted: 30x1GJ UV Laser Turret
 	 - 10 workspaces
+	 - Mounted: 30x1GJ UV Laser Turret
 * [5] Habitat
 	 - 10 workspaces
 * [6++] Power Plant - Fusion Reactor
@@ -68,8 +68,9 @@ center
 
 rear
 ---
-* [1-2] Armor - Nanocomposite
+* [1-2] Armor - Nanocomposite (Hardened)
 * [3] Cargo Hold
+	 - Capacity: 5kT
 * [4-5!!] Reactionless Engine - Standard
 	 - 20 workspaces
 * [6!] Stardrive

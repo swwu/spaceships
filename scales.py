@@ -121,6 +121,17 @@ class Geometric10HalfScale(BaseScale):
         tens, odd = divmod(sm - self.start_sm, 2)
         return self.start_val * (10 ** tens) * (3 ** odd)
 
+class TrackScale(BaseScale):
+    track = []
+    track_start = 0
+
+    def __init__(self, track_start, track):
+        self.track = track
+        self.track_start = track_start
+
+    def get_scale_value(self, sm):
+        return self.track[sm-self.track_start]
+
 def get_scale(scale_type_name, start_val, start_sm):
     return {"dr": DRScale,
             "dmg_dice": DmgDiceScale,
@@ -133,14 +144,21 @@ def scale_from_json(s_json):
     if isinstance(s_json, numbers.Number):
         return ConstantScale(s_json)
 
-    scale_cycle = s_json["cycle"]
-    start_val, start_sm = s_json["start"]
-    min_sm = s_json.get("min_sm", 0)
-    if isinstance(scale_cycle, str):
-        return get_scale(scale_cycle, start_val, start_sm)
+    if "cycle" in s_json:
+        scale_cycle = s_json["cycle"]
+        start_val, start_sm = s_json["start"]
+        min_sm = s_json.get("min_sm", 0)
+        if isinstance(scale_cycle, str):
+            return get_scale(scale_cycle, start_val, start_sm)
+        else:
+            # secretly everything is a TruncatedCycleScale
+            return TruncatedCycleScale(start_val, start_sm, scale_cycle, min_sm)
+    elif "track" in s_json:
+        return TrackScale(s_json["track_start"],
+                s_json["track"])
     else:
-        # secretly everything is a TruncatedCycleScale
-        return TruncatedCycleScale(start_val, start_sm, scale_cycle, min_sm)
+        raise Exception("Invalid scale json %s" % s_json)
+
 
 
 
