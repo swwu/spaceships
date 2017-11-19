@@ -86,15 +86,32 @@
 
 {
   "id": "conventional_missile",
-  "name": "Conventional Missile",
+  "name": "Anti-fighter Missile",
   "type": "launcher",
   "dmg_kw": "burn exp",
   "armor_div": 2,
   "rof": 1,
   "draws_power": false,
   "missile": {
-    "big_name": "Conventional Torpedo",
-    "speed": 15,
-    "turns": 2
+    "dmg_track_offset": -8,
+    "sacc": 0,
+    "speed": 20,
+    "turns": 1
   }
-}]
+},
+{
+  "id": "conventional_torpedo",
+  "name": "Torpedo",
+  "type": "launcher",
+  "dmg_kw": "burn exp",
+  "armor_div": 2,
+  "rof": 1,
+  "draws_power": false,
+  "missile": {
+    "dmg_track_offset": -4,
+    "sacc": -8,
+    "speed": 15,
+    "turns": 4
+  }
+}
+]

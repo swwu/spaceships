@@ -16,8 +16,8 @@ front
 ---
 | # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
 |---|----|--------|------|--------|-------|-----|-----|
+|1|5 (0)|20cm Anti-fighter Missile Tube|2|3dx15 (2)|20 (20 move for 1 turns)|1||
 |2|5 (0)|Fixed 10MJ UV Laser|2|4dx1 burn (2)|1/2|1||
-|1|5 (0)|20cm Conventional Missile Tube|4|3dx30 (2)|30 (15 move for 2 turns)|1||
 
 
 center
@@ -40,7 +40,7 @@ front
 ---
 * [1-3] Armor - Nanocomposite
 * [4-6!!] Weapons Battery - Major
-	 - Mounted: 1xFixed 10MJ UV Laser, 1xFixed 10MJ UV Laser, 1x20cm Conventional Missile Tube
+	 - Mounted: 1xFixed 10MJ UV Laser, 1xFixed 10MJ UV Laser, 1x20cm Anti-fighter Missile Tube
 
 
 center

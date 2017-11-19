@@ -16,7 +16,7 @@ front
 ---
 | # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
 |---|----|--------|------|--------|-------|-----|-----|
-|3|12 (-1)|64cm Conventional Torpedo Tube|5|3dx100 (2)|60 (15 move for 4 turns)|1||
+|3|12 (-1)|64cm Torpedo Tube|-6|3dx100 (2)|60 (15 move for 4 turns)|1||
 
 
 center
@@ -43,7 +43,7 @@ front
 * [1] Armor - Nanocomposite (Hardened)
 * [2] Weapons Battery - Medium
 	 - 30 workspaces
-	 - Mounted: 3x64cm Conventional Torpedo Tube
+	 - Mounted: 3x64cm Torpedo Tube
 * [3] Defensive ECM - Area Jammer
 	 - 30 workspaces
 * [4] Comms/Sensor Array - Multipurpose

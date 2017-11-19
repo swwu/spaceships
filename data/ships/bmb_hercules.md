@@ -16,7 +16,7 @@ front
 ---
 | # | SM | Weapon | sAcc | Damage | Range | RoF | Rcl |
 |---|----|--------|------|--------|-------|-----|-----|
-|1|8 (1)|32cm Conventional Torpedo Tube|5|3dx50 (2)|60 (15 move for 4 turns)|1||
+|1|8 (1)|32cm Torpedo Tube|-6|3dx50 (2)|60 (15 move for 4 turns)|1||
 
 
 center
@@ -43,7 +43,7 @@ front
 * [5] Fuel Tank
 	 - Fuel Capacity: 15T
 * [6] Weapons Battery - Spinal
-	 - Mounted: 1x32cm Conventional Torpedo Tube
+	 - Mounted: 1x32cm Torpedo Tube
 
 
 center

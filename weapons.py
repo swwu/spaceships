@@ -135,50 +135,44 @@ class BeamWeapon(BaseWeapon):
 
 
 class LauncherWeapon(BaseWeapon):
-    # we use modified damage from actual rules, so missiles aren't 1-hit KOs
-    # against ships 2 sizes larger
-    MULTIPLIER_OFFSET = -4
-    # starts at SM-9
-    # TODO: share with guns when those are implemented
-    LAUNCHER_CALIBER_TRACK = [
-            2,2.5,3,3.5,
-            4,5,6,7,8,
-            10,12,14,16,20,
-            20,24,28,32,40,48,56,64,80,96,112]
+    LAUNCHER_CALIBER_TRACK = [2,2.5,3,3.5,
+                             4,5,6,7,8,
+                             10,12,14,16,20,
+                             20,24,28,32,40,48,56,64,80,96,112]
+    WARHEAD_MULTIPLIER_TRACK = [5,6,7,8,
+                               10,12,15,18,20,
+                               25,30,35,40,50,
+                               60,70,80,100,120,140,160,200,240,280]
 
-    # what to multiply 6d by. starts at SM-9 as above
-    WARHEAD_MULTIPLIER_TRACK = [
-            5,6,7,8,
-            10,12,15,18,20,
-            25,30,35,40,50,
-            60,70,80,100,120,140,160,200,240,280]
+    launcher_caliber_scale = None
+    warhead_multiplier_scale = None
 
-    big_name = "Bigger than 28cm launcher"
     speed = 0
     turns = 0
+    sacc = 0
 
     def __init__(self, w_json):
         super().__init__(w_json)
         missile_json = w_json["missile"]
         self.speed = missile_json["speed"]
         self.turns = missile_json["turns"]
-        self.big_name = missile_json["big_name"]
+        self.sacc = missile_json["sacc"]
+        self.launcher_caliber_scale = scales.TrackScale(
+                -9, self.LAUNCHER_CALIBER_TRACK)
+        self.warhead_multiplier_scale = scales.TrackScale(
+                -9 - missile_json["dmg_track_offset"],
+                self.WARHEAD_MULTIPLIER_TRACK)
 
     def get_weap_data(self,sm,is_turret):
-        sacc = 2 # TL10 - 8
+        sacc = self.sacc
         turns = self.turns
         name = self.name
-        # launchers above 32cm get doubled lifetime (delta-v and thrust in
-        # actual rules)
-        if sm >= 8:
-            sacc += 1
-            turns *= 2
-            name = self.big_name
 
         size_str = "%scm %s" % (
-                self.LAUNCHER_CALIBER_TRACK[sm+9], name)
+                self.launcher_caliber_scale.get_scale_value(sm),
+                name)
         if is_turret:
-            size_str = size_str + " Turreted Launcher"
+            size_str = size_str + " Launcher Turret"
         else:
             size_str = size_str + " Tube"
             sacc += 2
@@ -187,13 +181,74 @@ class LauncherWeapon(BaseWeapon):
                 **{
                     "type": "launcher",
                     "dmg_label": "3dx%s" %
-                    self.WARHEAD_MULTIPLIER_TRACK[sm+9+self.MULTIPLIER_OFFSET],
+                    self.warhead_multiplier_scale.get_scale_value(sm),
                     "speed": self.speed,
                     "turns": turns,
                     "range": self.speed * turns,
                     "sacc": sacc,
-                    "size_label": size_str
-                    })
+                    "size_label": size_str})
+
+
+    # Massive missile houserules. Below is a "rules-compliant" implementation
+    ## we use modified damage from actual rules, so missiles aren't 1-hit KOs
+    ## against ships 2 sizes larger
+    #MULTIPLIER_OFFSET = -4
+    ## starts at SM-9
+    ## TODO: share with guns when those are implemented
+    #LAUNCHER_CALIBER_TRACK = [
+    #        2,2.5,3,3.5,
+    #        4,5,6,7,8,
+    #        10,12,14,16,20,
+    #        20,24,28,32,40,48,56,64,80,96,112]
+
+    ## what to multiply 6d by. starts at SM-9 as above
+    #WARHEAD_MULTIPLIER_TRACK = [
+    #        5,6,7,8,
+    #        10,12,15,18,20,
+    #        25,30,35,40,50,
+    #        60,70,80,100,120,140,160,200,240,280]
+
+    #big_name = "Bigger than 28cm launcher"
+    #speed = 0
+    #turns = 0
+
+    #def __init__(self, w_json):
+    #    super().__init__(w_json)
+    #    missile_json = w_json["missile"]
+    #    self.speed = missile_json["speed"]
+    #    self.turns = missile_json["turns"]
+    #    self.big_name = missile_json["big_name"]
+
+    #def get_weap_data(self,sm,is_turret):
+    #    sacc = 2 # TL10 - 8
+    #    turns = self.turns
+    #    name = self.name
+    #    # launchers above 32cm get doubled lifetime (delta-v and thrust in
+    #    # actual rules)
+    #    if sm >= 8:
+    #        sacc += 1
+    #        turns *= 2
+    #        name = self.big_name
+
+    #    size_str = "%scm %s" % (
+    #            self.LAUNCHER_CALIBER_TRACK[sm+9], name)
+    #    if is_turret:
+    #        size_str = size_str + " Turreted Launcher"
+    #    else:
+    #        size_str = size_str + " Tube"
+    #        sacc += 2
+
+    #    return dict(super().get_weap_data(sm,is_turret),
+    #            **{
+    #                "type": "launcher",
+    #                "dmg_label": "3dx%s" %
+    #                self.WARHEAD_MULTIPLIER_TRACK[sm+9+self.MULTIPLIER_OFFSET],
+    #                "speed": self.speed,
+    #                "turns": turns,
+    #                "range": self.speed * turns,
+    #                "sacc": sacc,
+    #                "size_label": size_str
+    #                })
 
 
 def weap_from_json(w_json):
